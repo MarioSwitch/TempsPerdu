@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="title">
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="time">
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="seconds">
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="level_titles">
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textSize">27sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="level">
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="description">
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>
