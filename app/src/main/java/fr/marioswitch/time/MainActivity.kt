@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
+import android.view.View.VISIBLE
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -87,6 +89,22 @@ class MainActivity : AppCompatActivity() {
                     9 -> level.text = "9/10"
                     10 -> level.text = "10/10"
                     in 11..14 -> level.text = ""
+                }
+                when(nowLevel){
+                    11 -> bronze_icon.visibility = View.VISIBLE
+                    else -> bronze_icon.visibility = View.INVISIBLE
+                }
+                when(nowLevel){
+                    12 -> silver_icon.visibility = View.VISIBLE
+                    else -> silver_icon.visibility = View.INVISIBLE
+                }
+                when(nowLevel){
+                    13 -> gold_icon.visibility = View.VISIBLE
+                    else -> gold_icon.visibility = View.INVISIBLE
+                }
+                when(nowLevel){
+                    14 -> diamond_icon.visibility = View.VISIBLE
+                    else -> diamond_icon.visibility = View.INVISIBLE
                 }
                 when(nowLevel){
                     0 -> nextlevel.text = "1 minute"

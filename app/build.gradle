@@ -10,8 +10,8 @@ android {
         applicationId "fr.marioswitch.time"
         minSdk 21
         targetSdk 32
-        versionCode 3
-        versionName "2.α3"
+        versionCode 4
+        versionName "2.α4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
