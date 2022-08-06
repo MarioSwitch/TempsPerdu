@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
-import android.view.View.VISIBLE
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,21 +23,21 @@ class MainActivity : AppCompatActivity() {
         mainHandler.post(object : Runnable {
             override fun run() {
                 totalSeconds++
-                save.edit().putInt("total",totalSeconds)
+                save.edit().putInt("total",totalSeconds).apply()
                 var seconds:Int = totalSeconds.rem(60)
                 var minutes:Int = (totalSeconds/60).rem(60)
                 var hours:Int = (totalSeconds/3600).rem(24)
                 var days:Int = totalSeconds/86400
                 when(totalSeconds){
-                    in 0..59 -> time.text = buildString { append(seconds); append("s") };
-                    in 60..3599 -> time.text = buildString { append(minutes); append("m "); append(seconds); append("s") }
-                    in 3600..86399 -> time.text = buildString { append(hours); append("h "); append(minutes); append("m "); append(seconds); append("s") }
-                    else -> time.text = buildString { append(days); append("j "); append(hours); append("h "); append(minutes); append("m "); append(seconds); append("s") }
+                    in 0..59 -> time.text = buildString { append(seconds); append(getString(R.string.second)) };
+                    in 60..3599 -> time.text = buildString { append(minutes); append(getString(R.string.minute)); append(seconds); append(getString(R.string.second)) }
+                    in 3600..86399 -> time.text = buildString { append(hours); append(getString(R.string.hour)); append(minutes); append(getString(R.string.minute)); append(seconds); append(getString(R.string.second)) }
+                    else -> time.text = buildString { append(days); append(getString(R.string.day)); append(hours); append(getString(R.string.hour)); append(minutes); append(getString(R.string.minute)); append(seconds); append(getString(R.string.second)) }
                 }
                 if(totalSeconds<60){
                     time_seconds.text = ""
                 }else{
-                    time_seconds.text = buildString { append("soit "); append(totalSeconds); append(" secondes") }
+                    time_seconds.text = String.format(getString(R.string.time_seconds),totalSeconds)
                 }
                 var nowLevel:Int
                 when(totalSeconds){
@@ -77,17 +76,7 @@ class MainActivity : AppCompatActivity() {
                     else -> nextGoal = 0
                 }
                 when(nowLevel){
-                    0 -> level.text = "0/10"
-                    1 -> level.text = "1/10"
-                    2 -> level.text = "2/10"
-                    3 -> level.text = "3/10"
-                    4 -> level.text = "4/10"
-                    5 -> level.text = "5/10"
-                    6 -> level.text = "6/10"
-                    7 -> level.text = "7/10"
-                    8 -> level.text = "8/10"
-                    9 -> level.text = "9/10"
-                    10 -> level.text = "10/10"
+                    in 0..10 -> level.text = String.format(getString(R.string.level),nowLevel)
                     in 11..14 -> level.text = ""
                 }
                 when(nowLevel){
@@ -107,21 +96,21 @@ class MainActivity : AppCompatActivity() {
                     else -> diamond_icon.visibility = View.INVISIBLE
                 }
                 when(nowLevel){
-                    0 -> nextlevel.text = "1 minute"
-                    1 -> nextlevel.text = "5 minutes"
-                    2 -> nextlevel.text = "10 minutes"
-                    3 -> nextlevel.text = "30 minutes"
-                    4 -> nextlevel.text = "1 heure"
-                    5 -> nextlevel.text = "2 heures"
-                    6 -> nextlevel.text = "4 heures"
-                    7 -> nextlevel.text = "7 heures"
-                    8 -> nextlevel.text = "12 heures"
-                    9 -> nextlevel.text = "1 jour"
-                    10 -> nextlevel.text = "3 jours"
-                    11 -> nextlevel.text = "7 jours"
-                    12 -> nextlevel.text = "14 jours"
-                    13 -> nextlevel.text = "30 jours"
-                    14 -> nextlevel.text = "Aucun"
+                    0 -> nextlevel.text = getString(R.string.nextlevel0)
+                    1 -> nextlevel.text = getString(R.string.nextlevel1)
+                    2 -> nextlevel.text = getString(R.string.nextlevel2)
+                    3 -> nextlevel.text = getString(R.string.nextlevel3)
+                    4 -> nextlevel.text = getString(R.string.nextlevel4)
+                    5 -> nextlevel.text = getString(R.string.nextlevel5)
+                    6 -> nextlevel.text = getString(R.string.nextlevel6)
+                    7 -> nextlevel.text = getString(R.string.nextlevel7)
+                    8 -> nextlevel.text = getString(R.string.nextlevel8)
+                    9 -> nextlevel.text = getString(R.string.nextlevel9)
+                    10 -> nextlevel.text = getString(R.string.nextlevel10)
+                    11 -> nextlevel.text = getString(R.string.nextlevel11)
+                    12 -> nextlevel.text = getString(R.string.nextlevel12)
+                    13 -> nextlevel.text = getString(R.string.nextlevel13)
+                    14 -> nextlevel.text = getString(R.string.nextlevel14)
                 }
                 when(nowLevel){
                     in 5..9 -> completion.text = buildString { append(totalSeconds*100/nextGoal); append(" %") }

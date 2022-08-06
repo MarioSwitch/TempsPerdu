@@ -1,11 +1,35 @@
 <resources>
-    <string name="app_name">Temps Perdu</string>
+    <!-- Texte de démo -->
     <string name="none">-</string>
-    <string name="example_time">0j 00h 00m 00s</string>
-    <string name="example_seconds">soit 000000 secondes</string>
-    <string name="level_title">Palier actuel</string>
+    <string name="example_time">0d 00h 00m 00s</string>
+    <string name="example_seconds">i.e. 000000 seconds</string>
     <string name="example_level">0/10</string>
-    <string name="nextlevel_title">Palier suivant</string>
     <string name="example_nextlevel">1 minute</string>
     <string name="example_completion">00 %</string>
+
+    <!-- Texte utilisé -->
+    <string name="app_name">Wasted Time</string>
+    <string name="day">d\u0020</string>
+    <string name="hour">h\u0020</string>
+    <string name="minute">m\u0020</string>
+    <string name="second">s</string>
+    <string name="time_seconds">i.e. %1$d seconds</string>
+    <string name="level_title">Current level</string>
+    <string name="level">%1$d/10</string>
+    <string name="nextlevel_title">Next level</string>
+    <string name="nextlevel0">1 minute</string>
+    <string name="nextlevel1">5 minutes</string>
+    <string name="nextlevel2">10 minutes</string>
+    <string name="nextlevel3">30 minutes</string>
+    <string name="nextlevel4">1 hour</string>
+    <string name="nextlevel5">2 hours</string>
+    <string name="nextlevel6">4 hours</string>
+    <string name="nextlevel7">7 hours</string>
+    <string name="nextlevel8">12 hours</string>
+    <string name="nextlevel9">1 day</string>
+    <string name="nextlevel10">3 days</string>
+    <string name="nextlevel11">7 days</string>
+    <string name="nextlevel12">14 days</string>
+    <string name="nextlevel13">30 days</string>
+    <string name="nextlevel14">None</string>
 </resources>
