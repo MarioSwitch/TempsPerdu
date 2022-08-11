@@ -1,5 +1,5 @@
 <resources>
-    <!-- Texte de démo -->
+    <!-- Debug Strings -->
     <string name="none">-</string>
     <string name="example_time">0d 00h 00m 00s</string>
     <string name="example_seconds">i.e. 000000 seconds</string>
@@ -7,7 +7,7 @@
     <string name="example_nextlevel">1 minute</string>
     <string name="example_completion">00 %</string>
 
-    <!-- Texte utilisé -->
+    <!-- Used Strings -->
     <string name="app_name">Wasted Time</string>
     <string name="day">d\u0020</string>
     <string name="hour">h\u0020</string>

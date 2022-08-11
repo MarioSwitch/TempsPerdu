@@ -1,0 +1,35 @@
+<resources>
+    <!-- texto de depuración -->
+    <string name="none">-</string>
+    <string name="example_time">0d 00h 00m 00s</string>
+    <string name="example_seconds">000000 segundos</string>
+    <string name="example_level">0/10</string>
+    <string name="example_nextlevel">1 minuto</string>
+    <string name="example_completion">00 %</string>
+
+    <!-- texto usado -->
+    <string name="app_name">Tiempo Perdido</string>
+    <string name="day">d\u0020</string>
+    <string name="hour">h\u0020</string>
+    <string name="minute">m\u0020</string>
+    <string name="second">s</string>
+    <string name="time_seconds">%1$d segundos</string>
+    <string name="level_title">Nivel actual</string>
+    <string name="level">%1$d/10</string>
+    <string name="nextlevel_title">Siguiente nivel</string>
+    <string name="nextlevel0">1 minuto</string>
+    <string name="nextlevel1">5 minutos</string>
+    <string name="nextlevel2">10 minutos</string>
+    <string name="nextlevel3">30 minutos</string>
+    <string name="nextlevel4">1 hora</string>
+    <string name="nextlevel5">2 horas</string>
+    <string name="nextlevel6">4 horas</string>
+    <string name="nextlevel7">7 horas</string>
+    <string name="nextlevel8">12 horas</string>
+    <string name="nextlevel9">1 día</string>
+    <string name="nextlevel10">3 días</string>
+    <string name="nextlevel11">7 días</string>
+    <string name="nextlevel12">14 días</string>
+    <string name="nextlevel13">30 días</string>
+    <string name="nextlevel14">Ninguna</string>
+</resources>
