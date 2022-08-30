@@ -107,7 +107,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/level"
         app:layout_constraintEnd_toStartOf="@+id/view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/level_title" />
+        app:layout_constraintTop_toTopOf="@+id/level_title"
+        android:contentDescription="@string/bronze_medal" />
 
     <ImageView
         android:id="@+id/silver_icon"
@@ -117,7 +118,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/level"
         app:layout_constraintEnd_toStartOf="@+id/view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/level_title" />
+        app:layout_constraintTop_toTopOf="@+id/level_title"
+        android:contentDescription="@string/silver_medal" />
 
     <ImageView
         android:id="@+id/gold_icon"
@@ -127,7 +129,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/level"
         app:layout_constraintEnd_toStartOf="@+id/view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/level_title" />
+        app:layout_constraintTop_toTopOf="@+id/level_title"
+        android:contentDescription="@string/gold_medal" />
 
     <ImageView
         android:id="@+id/diamond_icon"
@@ -137,6 +140,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/level"
         app:layout_constraintEnd_toStartOf="@+id/view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/level_title" />
+        app:layout_constraintTop_toTopOf="@+id/level_title"
+        android:contentDescription="@string/diamond_medal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

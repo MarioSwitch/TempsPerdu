@@ -32,4 +32,8 @@
     <string name="nextlevel12">14 days</string>
     <string name="nextlevel13">30 days</string>
     <string name="nextlevel14">None</string>
+    <string name="bronze_medal">Bronze Medal</string>
+    <string name="silver_medal">Silver Medal</string>
+    <string name="gold_medal">Gold Medal</string>
+    <string name="diamond_medal">Diamond Medal</string>
 </resources>
