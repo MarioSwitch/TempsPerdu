@@ -7,6 +7,13 @@
     <string name="example_nextlevel">1 minuto</string>
     <string name="example_completion">00 %</string>
 
+    <!-- texto por Google Play -->
+    <string name="connecting">Conectando…</string>
+    <string name="connected">Conectado</string>
+    <string name="disconnected">Desconectado</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="leaderboard">Ver la clasificación</string>
+
     <!-- texto usado -->
     <string name="app_name">Tiempo Perdido</string>
     <string name="day">d\u0020</string>

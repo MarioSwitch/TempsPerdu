@@ -7,6 +7,29 @@
     <string name="example_nextlevel">1 minute</string>
     <string name="example_completion">00 %</string>
 
+    <!-- Google Play Strings -->
+    <string name="game_services_project_id" translatable="false">227788413034</string>
+    <string name="leaderboard_id" translatable="false">CgkI6rD9ydAGEAIQAQ</string>
+    <string name="achievement01_id" translatable="false">CgkI6rD9ydAGEAIQAg</string>
+    <string name="achievement02_id" translatable="false">CgkI6rD9ydAGEAIQAw</string>
+    <string name="achievement03_id" translatable="false">CgkI6rD9ydAGEAIQBA</string>
+    <string name="achievement04_id" translatable="false">CgkI6rD9ydAGEAIQBQ</string>
+    <string name="achievement05_id" translatable="false">CgkI6rD9ydAGEAIQBg</string>
+    <string name="achievement06_id" translatable="false">CgkI6rD9ydAGEAIQBw</string>
+    <string name="achievement07_id" translatable="false">CgkI6rD9ydAGEAIQCA</string>
+    <string name="achievement08_id" translatable="false">CgkI6rD9ydAGEAIQCQ</string>
+    <string name="achievement09_id" translatable="false">CgkI6rD9ydAGEAIQCg</string>
+    <string name="achievement10_id" translatable="false">CgkI6rD9ydAGEAIQCw</string>
+    <string name="achievement11_id" translatable="false">CgkI6rD9ydAGEAIQDA</string>
+    <string name="achievement12_id" translatable="false">CgkI6rD9ydAGEAIQDQ</string>
+    <string name="achievement13_id" translatable="false">CgkI6rD9ydAGEAIQDg</string>
+    <string name="achievement14_id" translatable="false">CgkI6rD9ydAGEAIQDw</string>
+    <string name="connecting">Connecting…</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="login">Log in</string>
+    <string name="leaderboard">Show leaderboard</string>
+
     <!-- Used Strings -->
     <string name="app_name">Wasted Time</string>
     <string name="day">d\u0020</string>
