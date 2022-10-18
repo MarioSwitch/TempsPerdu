@@ -18,31 +18,39 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         PlayGamesSdk.initialize(this)
         val gamesSignInClient = PlayGames.getGamesSignInClient(this)
+        fun connectedMode(){
+            status.text = getString(R.string.connected)
+            button.text = getString(R.string.leaderboard)
+            button.visibility=View.VISIBLE
+            button.setOnClickListener{
+                PlayGames.getLeaderboardsClient(this).getLeaderboardIntent(getString(R.string.leaderboard_id)).addOnSuccessListener { intent -> startActivityForResult(intent, 9004) }
+            }
+        }
+        fun PlayGamesButton(){
+            status.text = getString(R.string.disconnected)
+            button.visibility=View.VISIBLE
+            button.setOnClickListener{
+                status.text = getString(R.string.connecting)
+                if(gamesSignInClient.signIn().isSuccessful) {
+                    connectedMode()
+                }
+                else{
+                    PlayGamesButton()
+                }
+            }
+        }
         gamesSignInClient.isAuthenticated.addOnCompleteListener { isAuthenticatedTask: Task<AuthenticationResult> ->
             if (!isAuthenticatedTask.isSuccessful) {
-                status.text = getString(R.string.disconnected)
-                button.visibility=View.VISIBLE
-                button.setOnClickListener{
-                    gamesSignInClient.signIn()
-                }
+                PlayGamesButton()
                 return@addOnCompleteListener
             }
             val authenticationResult =
                 isAuthenticatedTask.result
             if (!authenticationResult.isAuthenticated) {
-                status.text = getString(R.string.disconnected)
-                button.visibility=View.VISIBLE
-                button.setOnClickListener{
-                    gamesSignInClient.signIn()
-                }
+                PlayGamesButton()
                 return@addOnCompleteListener
             }
-            status.text = getString(R.string.connected)
-            button.text = getString(R.string.leaderboard)
-            button.visibility=View.VISIBLE
-            button.setOnClickListener{
-                    PlayGames.getLeaderboardsClient(this).getLeaderboardIntent(getString(R.string.leaderboard_id)).addOnSuccessListener { intent -> startActivityForResult(intent, 9004) }
-            }
+            connectedMode()
         }
         setContentView(R.layout.activity_main)
         val save = getSharedPreferences("fr.marioswitch.time",Context.MODE_PRIVATE)
