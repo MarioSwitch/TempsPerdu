@@ -26,28 +26,19 @@ class MainActivity : AppCompatActivity() {
                 PlayGames.getLeaderboardsClient(this).getLeaderboardIntent(getString(R.string.leaderboard_id)).addOnSuccessListener { intent -> startActivityForResult(intent, 9004) }
             }
         }
-        fun PlayGamesButton(){
+        fun disconnectedMode(){
             status.text = getString(R.string.disconnected)
-            button.visibility=View.VISIBLE
-            button.setOnClickListener{
-                status.text = getString(R.string.connecting)
-                if(gamesSignInClient.signIn().isSuccessful) {
-                    connectedMode()
-                }
-                else{
-                    PlayGamesButton()
-                }
-            }
+            button.visibility=View.INVISIBLE
         }
         gamesSignInClient.isAuthenticated.addOnCompleteListener { isAuthenticatedTask: Task<AuthenticationResult> ->
             if (!isAuthenticatedTask.isSuccessful) {
-                PlayGamesButton()
+                disconnectedMode()
                 return@addOnCompleteListener
             }
             val authenticationResult =
                 isAuthenticatedTask.result
             if (!authenticationResult.isAuthenticated) {
-                PlayGamesButton()
+                disconnectedMode()
                 return@addOnCompleteListener
             }
             connectedMode()
