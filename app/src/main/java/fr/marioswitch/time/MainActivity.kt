@@ -45,7 +45,11 @@ class MainActivity : AppCompatActivity() {
         }
         setContentView(R.layout.activity_main)
         val save = getSharedPreferences("fr.marioswitch.time",Context.MODE_PRIVATE)
-        var totalSeconds = save.getLong("total", 0)
+        var totalSeconds = try {
+            save.getLong("total", 0)
+        }catch(e:ClassCastException){
+            save.getInt("total", 0).toLong()
+        }
 
         val mainHandler = Handler(Looper.getMainLooper())
         mainHandler.post(object : Runnable {
