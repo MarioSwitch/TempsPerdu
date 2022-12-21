@@ -2,10 +2,11 @@
     <!-- Debug Strings -->
     <string name="none">-</string>
     <string name="example_time">0d 00h 00m 00s</string>
-    <string name="example_seconds">i.e. 000000 seconds</string>
-    <string name="example_level">0/10</string>
-    <string name="example_nextlevel">1 minute</string>
-    <string name="example_completion">00 %</string>
+    <string name="example_level">2</string>
+    <string name="example_level_goal">5m</string>
+    <string name="example_nextLevel">3</string>
+    <string name="example_nextLevel_goal">10m</string>
+    <string name="example_timeLeft">4\' 12\" left</string>
 
     <!-- Google Play Strings -->
     <string name="game_services_project_id" translatable="false">227788413034</string>
@@ -27,7 +28,6 @@
     <string name="connecting">Connecting…</string>
     <string name="connected">Connected</string>
     <string name="disconnected">Disconnected</string>
-    <string name="login">Log in</string>
     <string name="leaderboard">Show leaderboard</string>
 
     <!-- Used Strings -->
@@ -36,27 +36,22 @@
     <string name="hour">h\u0020</string>
     <string name="minute">m\u0020</string>
     <string name="second">s</string>
-    <string name="time_seconds">i.e. %1$d seconds</string>
-    <string name="level_title">Current level</string>
-    <string name="level">%1$d/10</string>
-    <string name="nextlevel_title">Next level</string>
-    <string name="nextlevel0">1 minute</string>
-    <string name="nextlevel1">5 minutes</string>
-    <string name="nextlevel2">10 minutes</string>
-    <string name="nextlevel3">30 minutes</string>
-    <string name="nextlevel4">1 hour</string>
-    <string name="nextlevel5">2 hours</string>
-    <string name="nextlevel6">4 hours</string>
-    <string name="nextlevel7">7 hours</string>
-    <string name="nextlevel8">12 hours</string>
-    <string name="nextlevel9">1 day</string>
-    <string name="nextlevel10">3 days</string>
-    <string name="nextlevel11">7 days</string>
-    <string name="nextlevel12">14 days</string>
-    <string name="nextlevel13">30 days</string>
-    <string name="nextlevel14">None</string>
-    <string name="bronze_medal">Bronze Medal</string>
-    <string name="silver_medal">Silver Medal</string>
-    <string name="gold_medal">Gold Medal</string>
-    <string name="diamond_medal">Diamond Medal</string>
+    <string name="level0">0s</string>
+    <string name="level1">1m</string>
+    <string name="level2">5m</string>
+    <string name="level3">10m</string>
+    <string name="level4">30m</string>
+    <string name="level5">1h</string>
+    <string name="level6">2h</string>
+    <string name="level7">4h</string>
+    <string name="level8">7h</string>
+    <string name="level9">12h</string>
+    <string name="level10">1d</string>
+    <string name="level11">3d</string>
+    <string name="level12">7d</string>
+    <string name="level13">14d</string>
+    <string name="level14">30d</string>
+    <string name="timeLeft">%1$s left</string>
+    <string name="days">days</string>
+    <string name="congratulations">Level 💎 reached\nCongratulations!</string>
 </resources>

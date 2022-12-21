@@ -28,120 +28,83 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <TextView
-        android:id="@+id/time_seconds"
-        style="@style/seconds"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5sp"
-        android:text="@string/example_seconds"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time" />
-
-    <TextView
-        android:id="@+id/level_title"
-        style="@style/level_titles"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150sp"
-        android:text="@string/level_title"
-        app:layout_constraintEnd_toStartOf="@+id/view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time_seconds" />
-
-    <TextView
-        android:id="@+id/nextlevel_title"
-        style="@style/level_titles"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150sp"
-        android:text="@string/nextlevel_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/time_seconds" />
-
-    <TextView
-        android:id="@+id/level"
-        style="@style/level"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/example_level"
-        app:layout_constraintEnd_toStartOf="@+id/view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/level_title" />
-
-    <TextView
-        android:id="@+id/nextlevel"
-        style="@style/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/example_nextlevel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/nextlevel_title" />
-
-    <TextView
-        android:id="@+id/completion"
-        style="@style/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/example_completion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/nextlevel" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="1sp"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="10sp"
+        android:min="300"
+        android:max="600"
+        android:progress="348"
+        android:progressTint="@color/progressBar"
+        android:progressBackgroundTint="@color/progressBar_background"/>
 
-    <ImageView
-        android:id="@+id/bronze_icon"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
-        android:src="@drawable/bronze"
-        app:layout_constraintBottom_toBottomOf="@+id/level"
-        app:layout_constraintEnd_toStartOf="@+id/view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/level_title"
-        android:contentDescription="@string/bronze_medal" />
+    <TextView
+        android:id="@+id/level_now"
+        style="@style/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:text="@string/example_level"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar" />
 
-    <ImageView
-        android:id="@+id/silver_icon"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
-        android:src="@drawable/silver"
-        app:layout_constraintBottom_toBottomOf="@+id/level"
-        app:layout_constraintEnd_toStartOf="@+id/view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/level_title"
-        android:contentDescription="@string/silver_medal" />
+    <TextView
+        android:id="@+id/level_next"
+        style="@style/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10sp"
+        android:text="@string/example_nextLevel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar" />
 
-    <ImageView
-        android:id="@+id/gold_icon"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
-        android:src="@drawable/gold"
-        app:layout_constraintBottom_toBottomOf="@+id/level"
-        app:layout_constraintEnd_toStartOf="@+id/view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/level_title"
-        android:contentDescription="@string/gold_medal" />
+    <TextView
+        android:id="@+id/time_now"
+        style="@style/infos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:text="@string/example_level_goal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
-    <ImageView
-        android:id="@+id/diamond_icon"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
-        android:src="@drawable/diamond"
-        app:layout_constraintBottom_toBottomOf="@+id/level"
-        app:layout_constraintEnd_toStartOf="@+id/view"
+    <TextView
+        android:id="@+id/time_next"
+        style="@style/infos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10sp"
+        android:text="@string/example_nextLevel_goal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/time_left"
+        style="@style/infos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/example_timeLeft"
+        app:layout_constraintEnd_toStartOf="@+id/time_next"
+        app:layout_constraintStart_toEndOf="@+id/time_now"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/congratulations"
+        style="@style/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/congratulations"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/level_title"
-        android:contentDescription="@string/diamond_medal" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center" />
 
     <TextView
         android:id="@+id/status"
@@ -152,18 +115,19 @@
         android:text="@string/connecting"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/button"/>
+        app:layout_constraintBottom_toTopOf="@id/button" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100sp"
-        android:text="@string/login"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+        android:layout_marginBottom="50sp"
+        android:text="@string/leaderboard"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

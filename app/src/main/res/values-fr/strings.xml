@@ -1,46 +1,41 @@
 <resources>
-    <!-- Texte de démo -->
+    <!-- Debug Strings -->
     <string name="none">-</string>
     <string name="example_time">0j 00h 00m 00s</string>
-    <string name="example_seconds">soit 000000 secondes</string>
-    <string name="example_level">0/10</string>
-    <string name="example_nextlevel">1 minute</string>
-    <string name="example_completion">00 %</string>
+    <string name="example_level">2</string>
+    <string name="example_level_goal">5m</string>
+    <string name="example_nextLevel">3</string>
+    <string name="example_nextLevel_goal">10m</string>
+    <string name="example_timeLeft">Encore 4\' 12\"</string>
 
-    <!-- Texte pour les services Google -->
+    <!-- Google Play Strings -->
     <string name="connecting">Connexion…</string>
     <string name="connected">Connecté</string>
     <string name="disconnected">Déconnecté</string>
-    <string name="login">Se connecter</string>
     <string name="leaderboard">Voir le classement</string>
 
-    <!-- Texte utilisé -->
+    <!-- Used Strings -->
     <string name="app_name">Temps Perdu</string>
     <string name="day">j\u0020</string>
     <string name="hour">h\u0020</string>
     <string name="minute">m\u0020</string>
     <string name="second">s</string>
-    <string name="time_seconds">soit %1$d secondes</string>
-    <string name="level_title">Palier actuel</string>
-    <string name="level">%1$d/10</string>
-    <string name="nextlevel_title">Palier suivant</string>
-    <string name="nextlevel0">1 minute</string>
-    <string name="nextlevel1">5 minutes</string>
-    <string name="nextlevel2">10 minutes</string>
-    <string name="nextlevel3">30 minutes</string>
-    <string name="nextlevel4">1 heure</string>
-    <string name="nextlevel5">2 heures</string>
-    <string name="nextlevel6">4 heures</string>
-    <string name="nextlevel7">7 heures</string>
-    <string name="nextlevel8">12 heures</string>
-    <string name="nextlevel9">1 jour</string>
-    <string name="nextlevel10">3 jours</string>
-    <string name="nextlevel11">7 jours</string>
-    <string name="nextlevel12">14 jours</string>
-    <string name="nextlevel13">30 jours</string>
-    <string name="nextlevel14">Aucun</string>
-    <string name="bronze_medal">Médaille de bronze</string>
-    <string name="silver_medal">Médaille d\'argent</string>
-    <string name="gold_medal">Médaille d\'or</string>
-    <string name="diamond_medal">Médaille de diamant</string>
+    <string name="level0">0s</string>
+    <string name="level1">1m</string>
+    <string name="level2">5m</string>
+    <string name="level3">10m</string>
+    <string name="level4">30m</string>
+    <string name="level5">1h</string>
+    <string name="level6">2h</string>
+    <string name="level7">4h</string>
+    <string name="level8">7h</string>
+    <string name="level9">12h</string>
+    <string name="level10">1j</string>
+    <string name="level11">3j</string>
+    <string name="level12">7j</string>
+    <string name="level13">14j</string>
+    <string name="level14">30j</string>
+    <string name="timeLeft">Encore %1$s</string>
+    <string name="days">jours</string>
+    <string name="congratulations">Niveau 💎 atteint\nFélicitations !</string>
 </resources>
