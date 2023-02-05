@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#000000</color>
     <color name="background">#BAFFE7</color>
-    <color name="progressBar">#FF9900</color>
-    <color name="progressBar_background">#000000</color>
+    <color name="time_progress_bar">#FF9900</color>
+    <color name="clicks_progress_bar">#0099FF</color>
+    <color name="progress_bar_background">#000000</color>
 </resources>

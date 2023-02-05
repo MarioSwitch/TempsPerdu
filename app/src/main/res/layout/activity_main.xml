@@ -7,6 +7,8 @@
     android:background="@color/background"
     tools:context=".MainActivity">
 
+    <!-- Header -->
+
     <TextView
         android:id="@+id/title"
         style="@style/title"
@@ -16,6 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Time -->
 
     <TextView
         android:id="@+id/time"
@@ -29,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/time_progressBar"
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,74 +42,185 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginHorizontal="10sp"
-        android:min="300"
-        android:max="600"
-        android:progress="348"
-        android:progressTint="@color/progressBar"
-        android:progressBackgroundTint="@color/progressBar_background"/>
+        android:min="0"
+        android:max="1"
+        android:progress="0"
+        android:progressTint="@color/time_progress_bar"
+        android:progressBackgroundTint="@color/progress_bar_background"/>
 
     <TextView
-        android:id="@+id/level_now"
+        android:id="@+id/time_level_now"
         style="@style/level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10sp"
         android:text="@string/example_level"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar" />
+        app:layout_constraintBottom_toTopOf="@+id/time_progressBar" />
 
     <TextView
-        android:id="@+id/level_next"
+        android:id="@+id/time_level_next"
         style="@style/level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="10sp"
         android:text="@string/example_nextLevel"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar" />
+        app:layout_constraintBottom_toTopOf="@+id/time_progressBar" />
 
     <TextView
-        android:id="@+id/time_now"
+        android:id="@+id/time_progressBar_title"
+        style="@style/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_progress_title"
+        app:layout_constraintBottom_toTopOf="@+id/time_progressBar"
+        app:layout_constraintEnd_toStartOf="@+id/time_level_next"
+        app:layout_constraintStart_toEndOf="@+id/time_level_now" />
+
+    <TextView
+        android:id="@+id/time_count_now"
         style="@style/infos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10sp"
         android:text="@string/example_level_goal"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        app:layout_constraintTop_toBottomOf="@+id/time_progressBar" />
 
     <TextView
-        android:id="@+id/time_next"
+        android:id="@+id/time_count_next"
         style="@style/infos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="10sp"
         android:text="@string/example_nextLevel_goal"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        app:layout_constraintTop_toBottomOf="@+id/time_progressBar" />
 
     <TextView
-        android:id="@+id/time_left"
+        android:id="@+id/time_count_left"
         style="@style/infos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/example_timeLeft"
-        app:layout_constraintEnd_toStartOf="@+id/time_next"
-        app:layout_constraintStart_toEndOf="@+id/time_now"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        app:layout_constraintEnd_toStartOf="@+id/time_count_next"
+        app:layout_constraintStart_toEndOf="@+id/time_count_now"
+        app:layout_constraintTop_toBottomOf="@+id/time_progressBar" />
 
     <TextView
-        android:id="@+id/congratulations"
+        android:id="@+id/time_congratulations"
         style="@style/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/congratulations"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center" />
+        app:layout_constraintTop_toTopOf="@+id/time_progressBar" />
 
+    <!-- Clicker -->
+    <View
+        android:id="@+id/clicks_hitbox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/clicks"
+        style="@style/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:text="@string/example_clicks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time" />
+
+    <ProgressBar
+        android:id="@+id/clicks_progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10sp"
+        android:layout_marginTop="70sp"
+        android:max="1"
+        android:min="0"
+        android:progress="0"
+        android:progressBackgroundTint="@color/progress_bar_background"
+        android:progressTint="@color/clicks_progress_bar"
+        app:layout_constraintTop_toBottomOf="@+id/time_count_left" />
+
+    <TextView
+        android:id="@+id/clicks_level_now"
+        style="@style/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:text="@string/example_level"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/clicks_progressBar" />
+
+    <TextView
+        android:id="@+id/clicks_level_next"
+        style="@style/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10sp"
+        android:text="@string/example_nextLevel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/clicks_progressBar" />
+
+    <TextView
+        android:id="@+id/clicks_progressBar_title"
+        style="@style/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clicks_progress_title"
+        app:layout_constraintBottom_toTopOf="@+id/clicks_progressBar"
+        app:layout_constraintEnd_toStartOf="@+id/clicks_level_next"
+        app:layout_constraintStart_toEndOf="@+id/clicks_level_now" />
+
+    <TextView
+        android:id="@+id/clicks_count_now"
+        style="@style/infos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:text="@string/example_level_goal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clicks_progressBar" />
+
+    <TextView
+        android:id="@+id/clicks_count_next"
+        style="@style/infos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10sp"
+        android:text="@string/example_nextLevel_goal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clicks_progressBar" />
+
+    <TextView
+        android:id="@+id/clicks_count_left"
+        style="@style/infos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/example_timeLeft"
+        app:layout_constraintEnd_toStartOf="@+id/clicks_count_next"
+        app:layout_constraintStart_toEndOf="@+id/clicks_count_now"
+        app:layout_constraintTop_toBottomOf="@+id/clicks_progressBar" />
+
+    <TextView
+        android:id="@+id/clicks_congratulations"
+        style="@style/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/congratulations"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clicks_progressBar" />
+
+    <!-- Footer -->
     <TextView
         android:id="@+id/status"
         style="@style/level"
@@ -127,6 +242,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:visibility="invisible" />
+
 
 
 

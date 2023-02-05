@@ -2,40 +2,63 @@
     <!-- Debug Strings -->
     <string name="none">-</string>
     <string name="example_time">0j 00h 00m 00s</string>
+    <string name="example_clicks">0 clics</string>
     <string name="example_level">2</string>
     <string name="example_level_goal">5m</string>
     <string name="example_nextLevel">3</string>
     <string name="example_nextLevel_goal">10m</string>
     <string name="example_timeLeft">Encore 4\' 12\"</string>
 
-    <!-- Google Play Strings -->
-    <string name="connecting">Connexion…</string>
-    <string name="connected">Connecté</string>
-    <string name="disconnected">Déconnecté</string>
-    <string name="leaderboard">Voir le classement</string>
-
-    <!-- Used Strings -->
+    <!-- Time Strings -->
     <string name="app_name">Temps Perdu</string>
     <string name="day">j\u0020</string>
     <string name="hour">h\u0020</string>
     <string name="minute">m\u0020</string>
     <string name="second">s</string>
-    <string name="level0">0s</string>
-    <string name="level1">1m</string>
-    <string name="level2">5m</string>
-    <string name="level3">10m</string>
-    <string name="level4">30m</string>
-    <string name="level5">1h</string>
-    <string name="level6">2h</string>
-    <string name="level7">4h</string>
-    <string name="level8">7h</string>
-    <string name="level9">12h</string>
-    <string name="level10">1j</string>
-    <string name="level11">3j</string>
-    <string name="level12">7j</string>
-    <string name="level13">14j</string>
-    <string name="level14">30j</string>
+    <string name="time_progress_title">Temps</string>
+    <string name="time_level_0">0s</string>
+    <string name="time_level_1">1m</string>
+    <string name="time_level_2">5m</string>
+    <string name="time_level_3">10m</string>
+    <string name="time_level_4">30m</string>
+    <string name="time_level_5">1h</string>
+    <string name="time_level_6">2h</string>
+    <string name="time_level_7">4h</string>
+    <string name="time_level_8">7h</string>
+    <string name="time_level_9">12h</string>
+    <string name="time_level_10">1j</string>
+    <string name="time_level_11">3j</string>
+    <string name="time_level_12">7j</string>
+    <string name="time_level_13">14j</string>
+    <string name="time_level_14">30j</string>
     <string name="timeLeft">Encore %1$s</string>
     <string name="days">jours</string>
-    <string name="congratulations">Niveau 💎 atteint\nFélicitations !</string>
+
+    <!-- Clicks Strings -->
+    <string name="clicks">%1$s clics</string>
+    <string name="thousand_separator">\u0020</string>
+    <string name="clicks_progress_title">Clics</string>
+    <string name="clicks_level_0">0</string>
+    <string name="clicks_level_1">10</string>
+    <string name="clicks_level_2">100</string>
+    <string name="clicks_level_3">200</string>
+    <string name="clicks_level_4">500</string>
+    <string name="clicks_level_5">1k</string>
+    <string name="clicks_level_6">5k</string>
+    <string name="clicks_level_7">20k</string>
+    <string name="clicks_level_8">100k</string>
+    <string name="clicks_level_9">300k</string>
+    <string name="clicks_level_10">1M</string>
+    <string name="clicks_level_11">2M</string>
+    <string name="clicks_level_12">3M</string>
+    <string name="clicks_level_13">5M</string>
+    <string name="clicks_level_14">10M</string>
+    <string name="clicksLeft">Encore %1$s</string>
+
+    <!-- Footer Strings -->
+    <string name="congratulations">Niveau 💎 atteint</string>
+    <string name="connecting">Connexion…</string>
+    <string name="connected">Connecté</string>
+    <string name="disconnected">Déconnecté</string>
+    <string name="leaderboard">Voir le classement</string>
 </resources>
