@@ -57,8 +57,4 @@
 
     <!-- Footer Strings -->
     <string name="congratulations">Niveau 💎 atteint</string>
-    <string name="connecting">Connexion…</string>
-    <string name="connected">Connecté</string>
-    <string name="disconnected">Déconnecté</string>
-    <string name="leaderboard">Voir le classement</string>
 </resources>

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import com.google.android.gms.games.AuthenticationResult
@@ -23,30 +24,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         PlayGamesSdk.initialize(this)
         val gamesSignInClient = PlayGames.getGamesSignInClient(this)
-        fun connectedMode(){
-            binding.status.text = getString(R.string.connected)
-            binding.button.text = getString(R.string.leaderboard)
-            binding.button.visibility=View.VISIBLE
-            binding.button.setOnClickListener{
-                PlayGames.getLeaderboardsClient(this).getLeaderboardIntent(getString(R.string.time_leaderboard_id)).addOnSuccessListener { intent -> startActivityForResult(intent, 9004) }
-            }
-        }
-        fun disconnectedMode(){
-            binding.status.text = getString(R.string.disconnected)
-            binding.button.visibility=View.INVISIBLE
-        }
         gamesSignInClient.isAuthenticated.addOnCompleteListener { isAuthenticatedTask: Task<AuthenticationResult> ->
             if (!isAuthenticatedTask.isSuccessful) {
-                disconnectedMode()
+                Toast.makeText(this@MainActivity, "Échec de la connexion à Google Play", Toast.LENGTH_LONG).show()
                 return@addOnCompleteListener
             }
             val authenticationResult =
                 isAuthenticatedTask.result
             if (!authenticationResult.isAuthenticated) {
-                disconnectedMode()
+                Toast.makeText(this@MainActivity, "Échec de la connexion à Google Play",Toast.LENGTH_LONG).show()
                 return@addOnCompleteListener
             }
-            connectedMode()
+            Toast.makeText(this@MainActivity, "Connexion à Google Play réussie",Toast.LENGTH_LONG).show()
         }
         val save = getSharedPreferences("fr.marioswitch.time",Context.MODE_PRIVATE)
 

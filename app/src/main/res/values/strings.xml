@@ -91,8 +91,4 @@
 
     <!-- Footer Strings -->
     <string name="congratulations">Level 💎 reached</string>
-    <string name="connecting">Connecting…</string>
-    <string name="connected">Connected</string>
-    <string name="disconnected">Disconnected</string>
-    <string name="leaderboard">Show leaderboard</string>
 </resources>
