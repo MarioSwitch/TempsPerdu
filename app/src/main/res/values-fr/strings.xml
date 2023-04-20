@@ -56,5 +56,7 @@
     <string name="clicksLeft">Encore %1$s</string>
 
     <!-- Footer Strings -->
+    <string name="googleplay_success">Connexion réussie à Google Play Jeux</string>
+    <string name="googleplay_failure">Échec de la connexion à Google Play Jeux</string>
     <string name="congratulations">Niveau 💎 atteint</string>
 </resources>

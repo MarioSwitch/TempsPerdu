@@ -26,16 +26,15 @@ class MainActivity : AppCompatActivity() {
         val gamesSignInClient = PlayGames.getGamesSignInClient(this)
         gamesSignInClient.isAuthenticated.addOnCompleteListener { isAuthenticatedTask: Task<AuthenticationResult> ->
             if (!isAuthenticatedTask.isSuccessful) {
-                Toast.makeText(this@MainActivity, "Échec de la connexion à Google Play", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity, getString(R.string.googleplay_failure), Toast.LENGTH_LONG).show()
                 return@addOnCompleteListener
             }
-            val authenticationResult =
-                isAuthenticatedTask.result
+            val authenticationResult = isAuthenticatedTask.result
             if (!authenticationResult.isAuthenticated) {
-                Toast.makeText(this@MainActivity, "Échec de la connexion à Google Play",Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity, getString(R.string.googleplay_failure),Toast.LENGTH_LONG).show()
                 return@addOnCompleteListener
             }
-            Toast.makeText(this@MainActivity, "Connexion à Google Play réussie",Toast.LENGTH_LONG).show()
+            Toast.makeText(this@MainActivity, getString(R.string.googleplay_success),Toast.LENGTH_LONG).show()
         }
         val save = getSharedPreferences("fr.marioswitch.time",Context.MODE_PRIVATE)
 

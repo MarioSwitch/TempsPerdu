@@ -90,5 +90,7 @@
     <string name="clicksLeft">%1$s left</string>
 
     <!-- Footer Strings -->
+    <string name="googleplay_success">Successfully connected to Google Play Games</string>
+    <string name="googleplay_failure">Failed to connect to Google Play Games</string>
     <string name="congratulations">Level 💎 reached</string>
 </resources>
