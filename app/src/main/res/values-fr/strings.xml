@@ -32,7 +32,6 @@
     <string name="time_level_13">14j</string>
     <string name="time_level_14">30j</string>
     <string name="timeLeft">Encore %1$s</string>
-    <string name="days">jours</string>
 
     <!-- Clicks Strings -->
     <string name="clicks">%1$s clics</string>
@@ -55,8 +54,6 @@
     <string name="clicks_level_14">10M</string>
     <string name="clicksLeft">Encore %1$s</string>
 
-    <!-- Footer Strings -->
-    <string name="googleplay_success">Connexion réussie à Google Play Jeux</string>
-    <string name="googleplay_failure">Échec de la connexion à Google Play Jeux</string>
+    <!-- Other Strings -->
     <string name="congratulations">Niveau 💎 atteint</string>
 </resources>

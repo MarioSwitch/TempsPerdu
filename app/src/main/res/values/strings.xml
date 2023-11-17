@@ -9,40 +9,6 @@
     <string name="example_nextLevel_goal">10m</string>
     <string name="example_timeLeft">4\' 12\" left</string>
 
-    <!-- Google Play Strings -->
-    <string name="game_services_project_id" translatable="false">227788413034</string>
-    <string name="time_leaderboard_id" translatable="false">CgkI6rD9ydAGEAIQAQ</string>
-    <string name="time_achievement01_id" translatable="false">CgkI6rD9ydAGEAIQAg</string>
-    <string name="time_achievement02_id" translatable="false">CgkI6rD9ydAGEAIQAw</string>
-    <string name="time_achievement03_id" translatable="false">CgkI6rD9ydAGEAIQBA</string>
-    <string name="time_achievement04_id" translatable="false">CgkI6rD9ydAGEAIQBQ</string>
-    <string name="time_achievement05_id" translatable="false">CgkI6rD9ydAGEAIQBg</string>
-    <string name="time_achievement06_id" translatable="false">CgkI6rD9ydAGEAIQBw</string>
-    <string name="time_achievement07_id" translatable="false">CgkI6rD9ydAGEAIQCA</string>
-    <string name="time_achievement08_id" translatable="false">CgkI6rD9ydAGEAIQCQ</string>
-    <string name="time_achievement09_id" translatable="false">CgkI6rD9ydAGEAIQCg</string>
-    <string name="time_achievement10_id" translatable="false">CgkI6rD9ydAGEAIQCw</string>
-    <string name="time_achievement11_id" translatable="false">CgkI6rD9ydAGEAIQDA</string>
-    <string name="time_achievement12_id" translatable="false">CgkI6rD9ydAGEAIQDQ</string>
-    <string name="time_achievement13_id" translatable="false">CgkI6rD9ydAGEAIQDg</string>
-    <string name="time_achievement14_id" translatable="false">CgkI6rD9ydAGEAIQDw</string>
-    <string name="clicks_leaderboard_id" translatable="false">CgkI6rD9ydAGEAIQEQ</string>
-    <string name="clicks_achievement01_id" translatable="false">CgkI6rD9ydAGEAIQEg</string>
-    <string name="clicks_achievement02_id" translatable="false">CgkI6rD9ydAGEAIQEw</string>
-    <string name="clicks_achievement03_id" translatable="false">CgkI6rD9ydAGEAIQFA</string>
-    <string name="clicks_achievement04_id" translatable="false">CgkI6rD9ydAGEAIQFQ</string>
-    <string name="clicks_achievement05_id" translatable="false">CgkI6rD9ydAGEAIQFg</string>
-    <string name="clicks_achievement06_id" translatable="false">CgkI6rD9ydAGEAIQFw</string>
-    <string name="clicks_achievement07_id" translatable="false">CgkI6rD9ydAGEAIQGA</string>
-    <string name="clicks_achievement08_id" translatable="false">CgkI6rD9ydAGEAIQGQ</string>
-    <string name="clicks_achievement09_id" translatable="false">CgkI6rD9ydAGEAIQGg</string>
-    <string name="clicks_achievement10_id" translatable="false">CgkI6rD9ydAGEAIQGw</string>
-    <string name="clicks_achievement11_id" translatable="false">CgkI6rD9ydAGEAIQHA</string>
-    <string name="clicks_achievement12_id" translatable="false">CgkI6rD9ydAGEAIQHQ</string>
-    <string name="clicks_achievement13_id" translatable="false">CgkI6rD9ydAGEAIQHg</string>
-    <string name="clicks_achievement14_id" translatable="false">CgkI6rD9ydAGEAIQHw</string>
-    <string name="all_achievement_id" translatable="false">CgkI6rD9ydAGEAIQIA</string>
-
     <!-- Time Strings -->
     <string name="app_name">Wasted Time</string>
     <string name="day">d\u0020</string>
@@ -66,7 +32,6 @@
     <string name="time_level_13">14d</string>
     <string name="time_level_14">30d</string>
     <string name="timeLeft">%1$s left</string>
-    <string name="days">days</string>
 
     <!-- Clicks Strings -->
     <string name="clicks">%1$s clicks</string>
@@ -89,8 +54,6 @@
     <string name="clicks_level_14">10M</string>
     <string name="clicksLeft">%1$s left</string>
 
-    <!-- Footer Strings -->
-    <string name="googleplay_success">Successfully connected to Google Play Games</string>
-    <string name="googleplay_failure">Failed to connect to Google Play Games</string>
+    <!-- Other Strings -->
     <string name="congratulations">Level 💎 reached</string>
 </resources>
