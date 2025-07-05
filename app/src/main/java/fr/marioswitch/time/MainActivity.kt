@@ -1,11 +1,11 @@
 package fr.marioswitch.time
 
-import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.edit
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         }
         setSupportActionBar(toolbar)
 
-        val save = getSharedPreferences("fr.marioswitch.time",Context.MODE_PRIVATE)
+        val save = getSharedPreferences("fr.marioswitch.time", MODE_PRIVATE)
 
         //Functions
         fun getLevel(value:Long, tab:Array<Int>): Int {
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.clicksHitbox.setOnClickListener {
             totalClicks++
-            save.edit().putLong("clicks",totalClicks).apply()
+            save.edit { putLong("clicks", totalClicks) }
             updateClicks()
         }
         updateClicks()
@@ -108,7 +108,7 @@ class MainActivity : AppCompatActivity() {
             override fun run() {
                 if(lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)){
                     totalSeconds++
-                    save.edit().putLong("total",totalSeconds).apply()
+                    save.edit { putLong("total", totalSeconds) }
                     val seconds:Int = totalSeconds.rem(60).toInt()
                     val minutes:Int = (totalSeconds/60).rem(60).toInt()
                     val hours:Int = (totalSeconds/3600).rem(24).toInt()
